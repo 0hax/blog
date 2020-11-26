@@ -1,0 +1,13 @@
+languageCode = "en-us"
+baseURL = "0hax.github.io"
+enableEmoji = "true"
+
+title = "LinuxMisc"
+theme = "light-hugo"
+author = "0hax"
+
+[Params]
+  description = "Mostly stuffs related to Linux"
+  email = "0hax@protonmail.com"
+  github = "0hax"
+  twitter = "0haxx"
