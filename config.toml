@@ -14,6 +14,6 @@ author = "0hax"
 
   [Params.staticman]
   endpoint = "https://comments-0hax.herokuapp.com/v2/entry"
-  username = "0hax-blog"
+  username = "0hax"
   repository = "blog"
   branch = "master"
