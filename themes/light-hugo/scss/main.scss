@@ -805,3 +805,238 @@ a:hover {
 		}
 	}
 }
+
+
+.comments-emoji {
+ margin-right:5px
+}
+#comments h3.title {
+ font-weight:700;
+ font-size:20px;
+ padding:10px 4rem;
+ background:#696969;
+ color:#fff
+}
+#comments .title a {
+ text-decoration:none;
+ color:#fff
+}
+.post-comments h3.prompt {
+ margin-top:2rem
+}
+.post-comment {
+ background-color:#fff;
+ padding:2rem 4rem
+}
+.post-comment.reply {
+ background:#f3f0f0eb;
+ position:relative
+}
+.arrow-up {
+ width:0;
+ height:0;
+ border-left:20px solid transparent;
+ border-right:20px solid transparent;
+ border-bottom:20px solid #f3f1f1;
+ position:absolute;
+ top:-20px
+}
+.post-comment-header {
+ margin-bottom:20px
+}
+.post-comment .comment-message {
+ font-size:1.7rem;
+ word-break:break-word
+}
+.post-comment-avatar {
+ display:inline-block;
+ vertical-align:middle;
+ border-radius:50%
+}
+.post-comment-info {
+ display:inline-block;
+ margin-left:20px;
+ margin-bottom:0;
+ vertical-align:middle
+}
+.comment__reply {
+ text-align:right;
+ margin-top:10px
+}
+.comment__reply button {
+ background:#9a6bcc;
+ color:#fff;
+ border:none;
+ transition:all .2s
+}
+.comment__reply button:hover {
+ border:none;
+ background:#996bccd1
+}
+.post-blogsubscriber-btn,
+.post-comment-field {
+ display:block;
+ font:inherit;
+ padding:10px;
+ margin-top:20px;
+ outline-color:#9b6bcc;
+ width:100%
+}
+.btn-primary.comment-buttons {
+ background:#696969 !important;
+ border-color:#696969 !important;
+ color:#fff;
+ border-radius:6px
+}
+.btn-primary.comment-buttons:focus,
+.btn-primary.comment-buttons:hover {
+ background:#7c51a2!important;
+ color:#fff
+}
+.btn-primary.comment-buttons:hover,
+.darkmode .btn-primary.comment-buttons:focus {
+ background:#838087!important
+}
+.post-comment-info .post-comment-name {
+ font-size:2rem;
+ font-weight:500
+}
+.post-comment-info .post-time {
+ font-size:14px;
+ font-weight:400;
+ letter-spacing:.03em;
+ color:#888
+}
+.post-comment-info .post-time:hover {
+ color:#696969
+}
+.post-new-comment {
+ margin-bottom:0;
+ margin-top:30px;
+ padding:4rem;
+ padding-top:0
+}
+.dialog {
+ display:none;
+ position:fixed;
+ background-color:#f7f7f7;
+ padding-top:20%;
+ top:0;
+ left:0;
+ width:100%;
+ height:100%;
+ text-align:center
+}
+.dialog:target {
+ display:block
+}
+.dialog h3 {
+ font-size:25px;
+ font-weight:700
+}
+.dialog .btn-primary.comment-buttons.ok {
+ width:7rem;
+ display:inline-block;
+ text-decoration:none
+}
+input[type=checkbox].checkbox {
+ display:none
+}
+.checkbox-label {
+ position:relative;
+ padding-left:0;
+ padding-bottom:0;
+ margin-top:10px;
+ margin-bottom:15px;
+ float:left
+}
+.checkbox-label:before {
+ content:' ';
+ display:inline-block;
+ width:25px;
+ height:25px;
+ border-width:1px;
+ border-style:solid;
+ vertical-align:middle;
+ position:relative;
+ bottom:2px;
+ color:#a9a9a9
+}
+.checkbox:checked+.checkbox-label:after {
+ content:'x';
+ display:inline-block;
+ position:absolute;
+ width:25px;
+ height:25px;
+ border-width:2px;
+ line-height:25px;
+ top:11px;
+ left:1px;
+ font-family:sans-serif;
+ text-align:center
+}
+.post-blogsubscriber-field.left {
+ clear:left;
+ float:left;
+ font:inherit;
+ padding:10px;
+ margin-top:20px;
+ margin-bottom:20px;
+ outline-color:#9b6bcc;
+ width:48%
+}
+.post-blogsubscriber-field.right {
+ clear:none;
+ float:right;
+ font:inherit;
+ padding:10px;
+ margin-top:20px;
+ margin-bottom:20px;
+ outline-color:#9b6bcc;
+ width:48%
+}
+@media (max-width:430px) {
+ .post-comment-info {
+  display:inline-block;
+  margin-left:0;
+  margin-top:20px;
+  margin-bottom:0;
+  vertical-align:middle
+ }
+ section#privacy-button-links {
+  flex-direction:column;
+  align-items:center
+ }
+ section#privacy-button-links div {
+  margin-left:initial
+ }
+ span.entry-meta {
+  float:none
+ }
+ h2.entry-title {
+  margin-left:0
+ }
+ p.teaser,
+ p.wordcount {
+  margin-left:0
+ }
+ p.teaser {
+  margin-top:10px
+ }
+ p.wordcount {
+  margin-top:10px;
+  margin-bottom:4rem
+ }
+ p {
+  font-size:1.8rem
+ }
+ .entry-title a {
+  border-bottom:none;
+  margin-bottom:0;
+  padding-bottom:0
+ }
+ .entry-title a:hover {
+  border-bottom:none
+ }
+}
+ 
