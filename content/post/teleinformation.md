@@ -29,14 +29,11 @@ Par exemple: https://github.com/xoseperez/espurna/wiki/Hardware-Itead-Sonoff-Bas
 
 Une fois les fils soudés, vous pouvez vous munir d'un convertisseur USB-UART 3v3 et vous pouvez flash esphome (https://esphome.io/index.html).
 
-Les patches pour la téléinformation étant dans la branche de dévelopemment pour le moment, nous devons cloner le repository git.
+Nous devons cloner le repository git.
 
 ```bash
 git clone https://github.com/esphome/esphome.git
-git checkout 5a2b14cfa47a722053b36b5116ddc5d9d9d39597
 ```
-
-Le commit `5a2b14cfa47a722053b36b5116ddc5d9d9d39597` étant le commit apportant la téléinformation.
 
 Une fois fait, je recommande d'utiliser un virtualenv pour installer esphome comme suit:
 
@@ -150,26 +147,30 @@ uart:
   parity: EVEN
   data_bits: 7
 
+teleinfo:
+  id: myteleinfo
+  update_interval: 60s
+  historical_mode: true
+
 sensor:
   - platform: teleinfo
-    tags:
-     - tag_name: "HCHC"
-       sensor:
-        name: "hchc"
-        unit_of_measurement: "Wh"
-        icon: mdi:flash
-     - tag_name: "HCHP"
-       sensor:
-        name: "hchp"
-        unit_of_measurement: "Wh"
-        icon: mdi:flash
-     - tag_name: "PAPP"
-       sensor:
-        name: "papp"
-        unit_of_measurement: "VA"
-        icon: mdi:flash
-    update_interval: 60s
-    historical_mode: true
+    tag_name: "HCHC"
+    name: "hchc"
+    unit_of_measurement: "Wh"
+    icon: mdi:flash
+    teleinfo_id: myteleinfo
+  - platform: teleinfo
+    tag_name: "HCHP"
+    name: "hchp"
+    unit_of_measurement: "Wh"
+    icon: mdi:flash
+    teleinfo_id: myteleinfo
+  - platform: teleinfo
+    tag_name: "PAPP"
+    name: "papp"
+    unit_of_measurement: "VA"
+    icon: mdi:flash
+    teleinfo_id: myteleinfo
 ```
 
 Pour un détail de toutes les étiquettes possibles, je vous conseil de regarder la documentation de la téléinformation:
@@ -184,7 +185,7 @@ esphome teleinfo.yaml run
 
 Votre Sonoff maintenant flashé, il faut créer un petit circuit permettant de démoduler le signal de téléinformation et le relié à la pin RX du Sonoff.
 Pour cela, nous allons utiliser un optocoupleur SFH620A et une résistance de 1k que nous allons soudé sur une plaque.
-Il y a plusieurs montage possible mais c'est le montage que j'utilise depuis quelques mois et je n'ai eu aucun problèmes de stabilité.  
+Il y a plusieurs montage possible mais c'est le montage que j'utilise depuis quelques années et je n'ai eu aucun problèmes de stabilité.  
 Voici un schéma du montage:  
 ![alt text](/schema.jpg)
 
